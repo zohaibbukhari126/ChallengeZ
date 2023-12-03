@@ -11,8 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  country_list_pick: ^2.0.0
   cupertino_icons: ^1.0.2
+  country_list_pick: ^1.0.1+6  # Added this line
+  shared_preferences: ^2.0.6
+  # ... other dependencies ...
 
 dev_dependencies:
   flutter_test:

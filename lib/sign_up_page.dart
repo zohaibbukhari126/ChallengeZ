@@ -141,7 +141,7 @@ class _SignUpPageState extends State<SignUpPage> {
             const SizedBox(height: 8),
             CountryListPick(
               appBar: AppBar(
-                backgroundColor: Colors.blue,
+                backgroundColor: Color.fromARGB(255, 35, 255, 153),
                 title: const Text('Choose a country'),
               ),
               theme: CountryTheme(

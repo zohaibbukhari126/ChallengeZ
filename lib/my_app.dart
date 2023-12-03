@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Challenge Z',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(243, 100, 56, 1)),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(56, 199, 243, 1)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Challenge Z'),

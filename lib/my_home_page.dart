@@ -1,39 +1,26 @@
 import 'package:flutter/material.dart';
-import 'login_page.dart';
-import 'sign_up_page.dart';
+import 'login_page.dart'; // Import your login page
+import 'sign_up_page.dart'; // Import your sign-up page
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
+
   final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.onInverseSurface,
-        title: Text(widget.title),
+        title: Text(title),
         actions: <Widget>[
           TextButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => LoginPage()),
+                MaterialPageRoute(builder: (context) =>  LoginPage()),
               );
             },
-            child: const Text('Login', style: TextStyle(color: Colors.black)),
+            child: const Text('Login', style: TextStyle(color: Color.fromRGBO(235, 38, 38, 1))),
           ),
           TextButton(
             onPressed: () {
@@ -42,27 +29,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialPageRoute(builder: (context) => const SignUpPage()),
               );
             },
-            child: const Text('Sign Up', style: TextStyle(color: Colors.black)),
+            child: const Text('Sign Up', style: TextStyle(color: Color.fromARGB(255, 255, 77, 77))),
           ),
         ],
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('You have pushed the button this many times:'),
+          children: const <Widget>[
             Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              'Welcome to the Fitness App!',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
+            // Additional widgets for your fitness app
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), 
     );
   }
 }
